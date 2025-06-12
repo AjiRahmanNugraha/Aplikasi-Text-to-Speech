@@ -1,0 +1,70 @@
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simple Book Reader with TTS - Fullstack</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <h1>Simple Book Reader with TTS - Fullstack</h1>
+
+  <label for="fileInput">Upload Document File (txt only):</label>
+  <input type="file" id="fileInput" accept=".txt,.pdf,.docx" />
+  <span id="loadingIndicator" style="display:none; margin-left:10px;">Uploading...</span>
+
+  <label for="textInput">Or enter book content manually:</label>
+  <textarea id="textInput" placeholder="Type or paste your book content here..."></textarea>
+
+  <label for="languageSelect">Select Language:</label>
+  <select id="languageSelect">
+    <option value="id-ID">Indonesian</option>
+    <option value="en-US" selected>English</option>
+    <option value="es-ES">Spanish</option>
+    <option value="fr-FR">French</option>
+    <option value="de-DE">German</option>
+    <option value="ja-JP">Japanese</option>
+    <option value="zh-CN">Chinese (Mandarin)</option>
+    <option value="ru-RU">Russian</option>
+    <option value="it-IT">Italian</option>
+    <option value="ko-KR">Korean</option>
+    <option value="pt-BR">Portuguese (Brazil)</option>
+    <option value="ar-SA">Arabic</option>
+    <option value="hi-IN">Hindi</option>
+    <option value="nl-NL">Dutch</option>
+    <option value="sv-SE">Swedish</option>
+    <option value="tr-TR">Turkish</option>
+    <option value="pl-PL">Polish</option>
+    <option value="he-IL">Hebrew</option>
+    <option value="th-TH">Thai</option>
+  </select>
+
+  <label for="voiceSelect">Select Voice:</label>
+  <select id="voiceSelect">
+    <option value="">Loading voices...</option>
+  </select>
+
+  <label for="rateSelect">Select Speed:</label>
+  <select id="rateSelect">
+    <option value="0.5">0.5x</option>
+    <option value="0.75">0.75x</option>
+    <option value="1" selected>1x (Normal)</option>
+    <option value="1.25">1.25x</option>
+    <option value="1.5">1.5x</option>
+    <option value="2">2x</option>
+  </select>
+
+  <div class="controls">
+    <button id="playBtn">Play</button>
+    <button id="pauseBtn" disabled>Pause</button>
+    <button id="stopBtn" disabled>Stop</button>
+  </div>
+
+  <div id="status"></div>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
+
